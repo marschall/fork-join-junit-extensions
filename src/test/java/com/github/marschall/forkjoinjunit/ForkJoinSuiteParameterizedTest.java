@@ -12,7 +12,7 @@ import static org.junit.Assert.assertNotNull;
 
 //@RunWith(Parameterized.class)
 @RunWith(ForkJoinSuite.class)
-@ForkJoinParameters(runnerBuilder = ParameterizedBuild.class, parallelism = 2)
+@ForkJoinParameters(runnerBuilder = ParameterizedBuilder.class, parallelism = 2)
 public class ForkJoinSuiteParameterizedTest {
   
   private final Integer parameter;

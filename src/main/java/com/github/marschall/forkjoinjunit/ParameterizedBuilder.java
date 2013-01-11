@@ -5,7 +5,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.model.RunnerBuilder;
 
 
-public final class ParameterizedBuild extends RunnerBuilder {
+public final class ParameterizedBuilder extends RunnerBuilder {
 
   @Override
   public Runner runnerForClass(Class<?> testClass) throws Throwable {
