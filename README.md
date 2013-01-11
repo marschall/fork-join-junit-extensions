@@ -12,7 +12,6 @@ You have to run your tests with `ForkJoinSuite`.
 
 ```java
 @RunWith(ForkJoinSuite.class)
-@ForkJoinParameters(runnerBuilder = JUnit4Builder.class, parallelism = 2)
 public class MyTest {
 
   @Test
