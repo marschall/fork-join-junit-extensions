@@ -9,9 +9,18 @@
  */
 package com.github.marscha.forkjoinjunit;
 
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
 import org.junit.runners.model.RunnerBuilder;
 
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
+@Target(TYPE)
+@Retention(RUNTIME)
+@Inherited
 public @interface ForkJoinParameters {
   
   Class<? extends RunnerBuilder> runnerBuilder();

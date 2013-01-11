@@ -60,15 +60,18 @@ public class ForkJoinSuite extends Suite {
     if (runner instanceof ParentRunner) {
       ParentRunner<?> parentRunner = (ParentRunner<?>) runner;
       parentRunner.setScheduler(new ForkJoinRunnerScheduler(forkJoinPool));
-      for (Runner child : getChildren(parentRunner)) {
-        recursivelySetScheduler(child, forkJoinPool);
+      for (Object each : getChildren(parentRunner)) {
+        if (each instanceof Runner) {
+          Runner child = (Runner) each;
+          recursivelySetScheduler(child, forkJoinPool);
+        }
       }
     }
   }
   
-  private static List<Runner> getChildren(Runner runner) {
+  private static List<?> getChildren(Runner runner) {
     try {
-      return (List<Runner>) METHOD_GET_CHILDREN.invoke(runner);
+      return (List<?>) METHOD_GET_CHILDREN.invoke(runner);
     } catch (ReflectiveOperationException e) {
       throw new RuntimeException("could not get children", e);
     }

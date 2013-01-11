@@ -9,6 +9,7 @@
  */
 package com.github.marscha.forkjoinjunit;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
@@ -23,6 +24,7 @@ public final class ForkJoinRunnerScheduler implements RunnerScheduler {
   
   public ForkJoinRunnerScheduler(ForkJoinPool forkJoinPool) {
     this.forkJoinPool = forkJoinPool;
+    this.tasks = new ArrayList<>();
   }
 
   @Override
