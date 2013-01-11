@@ -23,7 +23,7 @@ public class ForkJoinSuiteParameterizedTest {
   
   @Test
   public void testNotNull() throws InterruptedException {
-    Thread.currentThread().sleep(100);
+    Thread.sleep(100);
     assertNotNull(this.parameter);
   }
   
