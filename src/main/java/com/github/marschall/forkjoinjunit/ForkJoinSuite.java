@@ -1,13 +1,4 @@
-/*
- * Copyright (C) 2013 by Netcetera AG.
- * All rights reserved.
- *
- * The copyright to the computer program(s) herein is the property of Netcetera AG, Switzerland.
- * The program(s) may be used and/or copied only with the written permission of Netcetera AG or
- * in accordance with the terms and conditions stipulated in the agreement/contract under which 
- * the program(s) have been supplied.
- */
-package com.github.marscha.forkjoinjunit;
+package com.github.marschall.forkjoinjunit;
 
 import java.lang.reflect.Method;
 import java.util.Collections;
@@ -93,7 +84,12 @@ public class ForkJoinSuite extends Suite {
   }
 
   private ForkJoinPool buildForkJoinPool(ForkJoinParameters parameter) {
-    return new ForkJoinPool(parameter.parallelism());
+    int parallelism = parameter.parallelism();
+    if (parallelism > 0) {
+      return new ForkJoinPool(parallelism);
+    } else {
+      return new ForkJoinPool();
+    }
   }
 
 }
