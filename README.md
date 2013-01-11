@@ -1,9 +1,9 @@
 Fork/Join JUnit Extensions
 ==========================
 
-This project allows you to run JUnit tests in parallel using Java 7 (Fork/Join)[http://www.oracle.com/technetwork/articles/java/fork-join-422606.html].
+This project allows you to run JUnit tests in parallel using Java 7 [Fork/Join](http://www.oracle.com/technetwork/articles/java/fork-join-422606.html).
 
-The Maven Surefire Plugin can (achieve the same)[http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#threadCount] but this project also works for unit tests executed in Eclipse or dynamically generated tests.
+The Maven Surefire Plugin can [achieve the same](http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#threadCount) but this project also works for unit tests executed in Eclipse or dynamically generated tests.
 
 Usage
 -----
