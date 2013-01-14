@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>fork-join-junit-extensions</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
   <name>Fork/Join JUnit Extensions</name>
   <description>JUnit Extensions that use fork/join for parallel test execution.</description>
   <inceptionYear>2013</inceptionYear>
@@ -13,7 +13,7 @@
     <connection>scm:git:git@github.com:marschall/fork-join-junit-extensions.git</connection>
     <developerConnection>scm:git:git@github.com:marschall/fork-join-junit-extensions.git</developerConnection>
     <url>${project.url}</url>
-    <tag>fork-join-junit-extensions-0.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <developers>
