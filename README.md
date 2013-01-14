@@ -3,10 +3,21 @@ Fork/Join JUnit Extensions
 
 This project allows you to run JUnit tests in parallel using Java 7 [Fork/Join](http://www.oracle.com/technetwork/articles/java/fork-join-422606.html).
 
-The Maven Surefire Plugin can [achieve the same](http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#threadCount) but this project also works for unit tests executed in Eclipse or dynamically generated tests.
+This complements [Maven Surefire Plugin](http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#threadCount). Maven Surefire Plugin parallelizes at the class level and does not work in Eclipse or dynamically generated tests. This parallelizes tests in a class and works in Eclipse.
+
+When you have lots of test classes where each runs quickly you want to use Maven Surefire Plugin. When you have few test classes that take a lot of time and have more than one test you want to use this.
 
 Usage
 -----
+
+```xml
+<dependency>
+    <groupId>com.github.marschall</groupId>
+    <artifactId>fork-join-junit-extensions</artifactId>
+    <version>0.1.0</version>
+    <scope>test</scope>
+</dependency>
+```
 
 You have to run your tests with `ForkJoinSuite`.
 
